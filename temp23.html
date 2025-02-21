@@ -11,10 +11,17 @@
     <script>
         ball.style.position="absolute";
         let t=0;
+        let left=0;
         function ballfall() {
             t++;
+            if(t==500){
+                t=0;
+                l=Math.random()*500;
+            }
             ball.style.top=t+"px";
-            setTimeout(ballfall,1)
+            ball.style.left=l+"px";
+            setTimeout(ballfall,10)
+            
         }
         ballfall();
     </script>
